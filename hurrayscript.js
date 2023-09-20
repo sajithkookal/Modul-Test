@@ -1,4 +1,8 @@
 
+function preventBack() { window.history.forward(); }  
+setTimeout("preventBack()", 0);  
+window.onunload = function () { null }; 
+
 const rulesModal = document.getElementById("rules-modal");
 const rulesButton = document.querySelector("#rulesBtn");
 const closeModalBtn = document.getElementById("close");
