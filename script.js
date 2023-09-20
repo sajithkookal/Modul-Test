@@ -1,4 +1,8 @@
 
+function preventBack() { window.history.forward(); }  
+setTimeout("preventBack()", 0);  
+window.onunload = function () { null }; 
+
 //----------------Buttons-------------------------------------
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
