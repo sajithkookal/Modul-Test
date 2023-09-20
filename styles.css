@@ -1,0 +1,359 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: #8CC461;
+ 
+}
+#parent-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+}
+
+.container1 {
+    width: 50vw;
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+#compscore{
+    max-width: 110px;
+    text-align: center;
+    flex-grow: 1;
+    border-radius: 10px;
+
+    padding: 1px;
+    margin-right: 15px;
+    background-color: white;
+}
+#yourscore{
+    max-width: 110px;
+    flex-grow: 1;
+
+    text-align: center;
+    border-radius: 10px;
+    padding: 1px;
+    background-color: white;
+}
+#textdiv{
+    display: flex;
+    flex-grow: 4;
+    justify-content: left;
+}
+.rps{
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-size: 1.8rem;
+    color: white;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+#yourscore > span, #compscore > span {
+    color: #252525;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+#yourscore > p, #compscore > p {
+    color: #656565;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0;
+    text-align: center;
+}
+#play-board {
+    display: grid;
+    place-items: center;
+    justify-items: center;
+    position: fixed;
+    top: 40%;
+    /* display: none; */
+}
+#paper {
+    transform: rotate(5.27deg);
+    position: relative;
+    bottom: 275px;
+    left: 495px;
+}
+.paper-div {
+    border: 16px solid #ffa943;
+}
+.paper-div:hover img {
+    transform: scale(1.2); 
+ }
+#rock {
+    position: relative;
+    bottom: 110px;
+    left: 235px;
+}
+.rock-div {
+    border: 16px solid #0074b6;
+}
+.rock-div:hover img {
+    transform: scale(1.2); 
+  }
+#rock, #paper, #scissor {
+    cursor: pointer;
+}
+#scissor {
+    position: relative;
+    left: 365px;
+    bottom: 220px;
+}
+.scissor-div {
+    border: 16px solid #bd00ff;
+}
+.scissor-div:hover img {
+    transform: scale(1.2); 
+  }
+.action {
+    width: 130px;
+    height: 130px;
+    background-color: #ffff;
+    box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
+}
+.line-2 {
+    transform: rotate(120deg);
+    position: relative;
+    left: 74px;
+    top: 82px;
+}
+.line-3 {
+    transform: rotate(60deg);
+    position: relative;
+    right: 54px;
+    top: 104px;
+}
+.line {
+    width: 260px;
+    height: 0px;
+    border: 7px solid #000000a3;
+}
+.actions {
+    position: relative;
+    right: 130%;
+}
+#result-board {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    position: fixed;
+    top: 25%;
+    display: none;
+   
+}
+.boxes {
+    border-radius: 50%;
+}
+.user-box-1 {
+    padding: 1.5rem;
+    background: #8CC461;
+   
+}
+.user-box-2 {
+    padding: 2rem;
+    background-color: #8CC461;
+   
+}
+.user-box-3 {
+    padding: 2rem;
+    background-color: #8CC461;
+
+}
+.pc-box-1 {
+    padding: 1.5rem;
+    background: #8CC461;
+   
+}
+.pc-box-2 {
+    padding: 2rem;
+    background-color: #8CC461;
+   
+}
+.pc-box-3 {
+    padding: 2rem;
+    background-color: #8CC461;
+  
+}
+.picked-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 1.0em;
+    font-family: "Roboto", sans-serif;
+    color: white;
+}
+.result {
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+#result-text-1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+   
+}
+#result-text-2 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+.again-btn{
+    background: white;
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #6B6B6B;
+    font-size: .8rem;
+    border-radius: 4px;
+}
+.again-btn:hover{
+    background: #8CC461;
+    color: white;
+    border: 1px solid white;
+}
+#replay{
+    margin-top: 2rem;
+}
+.buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: row;
+}
+.btn {
+    background-color: transparent;
+    color: #ffff;
+    border: 2px solid #ffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #8CC461;
+    background: white;
+  }
+#next-btn {
+    display: none;
+    margin-left: 0.6rem;
+}
+#rules-modal {
+    position: absolute;
+    right: 3vw;
+    bottom: 80px;
+    width: 20vw;
+    color: #ffff;
+    background-color: #004429;
+    border: 7px solid #ffffff;
+    border-radius: 13px;
+    padding: 1.3rem;
+
+    display: none;
+    animation-name: closeModal;
+    animation-duration: 0.5s;
+}
+.close {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: -31px;
+    top: -29px;
+    background-color: #ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+#rules-modal h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 2px;
+}
+.rules li {
+    font-size: 0.8rem;
+    list-style: disc;
+    text-align: left;
+    margin-bottom: 0.6rem;
+    text-align: justify;
+}
+.rules li svg {
+    margin-right: 4px;
+}
+.close > span{
+    color: white;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+/* hurray page */
+#maindiv {
+    background-color: #8cc461;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.won-game-heading {
+    font-weight: 600;
+    font-size: 6rem;
+    margin: 0;
+  }
+  .won-game-sub-heading {
+    font-weight: 500;
+    font-size: 2.7rem;
+    margin: 0;
+    margin-bottom: 3rem;
+
+  }
+  #stars {
+    position: absolute;
+    top: 40px;
+  }
+  #trophy {
+    margin-top: 6rem;
+    margin-bottom: 10px;
+  }
