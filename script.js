@@ -15,17 +15,18 @@ const pcbox1 = document.querySelector(".pc-box-1");
 const pcbox2 = document.querySelector(".pc-box-2");
 const pcbox3 = document.querySelector(".pc-box-3");
 const againBtn = document.querySelector(".again-btn");
-//---------------Rules Modal-----------------------------------
+const userpicImg = document.getElementById("userpicImg");
+const pcpicImg = document.getElementById("pcpicImg");
+
 const rulesModal = document.getElementById("rules-modal");
 const rulesButton = document.querySelector("#rulesBtn");
 
-//----------------Won Game-------------------------------------
 const wonGame = document.querySelector(".won-game");
 
-//----------------Play Board-----------------------------------
+
 const playBoard = document.getElementById("play-board");
 
-//---------------ResultBoard-----------------------------------
+
 const resultBoard = document.getElementById("result-board");
 const userResult = document.querySelector(".user-result");
 const pcResult = document.querySelector(".pc-result");
@@ -33,16 +34,22 @@ let resultText = document.getElementById("result-text-1");
 let resultText2 = document.getElementById("result-text-2");
 let picked = document.querySelectorAll(".picked");
 
-// ------------------ Score Board-------------------------------
 const computerScore = document.getElementById("computerscore");
 const userScore = document.getElementById("userscore");
 window.history.forward();
 // Initialize scores from local storage or set to 0
 let playerScoreDB = parseInt(localStorage.getItem('playerScore')) || 0;
 let computerScoreDB = parseInt(localStorage.getItem('computerScore')) || 0;
-
+const images = [{
+    imageName:'rock',
+    url:'https://github.com/sajithkookal/Module-Test/blob/main/rock.png?raw=true'},
+    {imageName: 'paper',
+    url:'https://github.com/sajithkookal/Module-Test/blob/main/paper.png?raw=true'},
+    {imageName: 'scissors',
+    url:'https://github.com/sajithkookal/Module-Test/blob/main/scissor.png?raw=true'}];
 computerScore.textContent = computerScoreDB;
 userScore.textContent = playerScoreDB;
+
 
 rockBtn.addEventListener('click',function(){
     playGame('rock')
@@ -104,7 +111,15 @@ function determineWinner(playerChoice, computerChoice) {
     playAgainBtn.style.display = "block";
     replayBtn.style.display = "none";
     nextBtn.style.display = "none";
-
+    for (var i=0; i<images.length; i++){
+    if(playerChoice === images[i].imageName){
+        userpicImg.src = images[i].url;
+     }
+     if(computerChoice === images[i].imageName){
+        pcpicImg.src = images[i].url;
+     }
+    }
+    
     if (playerChoice === computerChoice) {
 
         resultText.textContent ="TIE UP";
