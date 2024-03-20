@@ -46,11 +46,11 @@ let playerScoreDB = parseInt(localStorage.getItem('playerScore')) || 0;
 let computerScoreDB = parseInt(localStorage.getItem('computerScore')) || 0;
 const images = [{
     imageName:'rock',
-    url:'https://github.com/sajithkookal/Module-Test/blob/main/rock.png?raw=true'},
+    url:'/rock.png'},
     {imageName: 'paper',
-    url:'https://github.com/sajithkookal/Module-Test/blob/main/paper.png?raw=true'},
+    url:'/paper.png'},
     {imageName: 'scissors',
-    url:'https://github.com/sajithkookal/Module-Test/blob/main/scissor.png?raw=true'}];
+    url:'/scissor.png'}];
 computerScore.textContent = computerScoreDB;
 userScore.textContent = playerScoreDB;
 
